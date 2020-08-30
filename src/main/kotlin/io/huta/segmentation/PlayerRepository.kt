@@ -9,9 +9,8 @@ interface PlayerRepository<F> {
     fun findAll(): Kind<F, List<Player>>
 }
 
-class IOPlayerRepository: PlayerRepository<ForIO> {
+class IOPlayerRepository : PlayerRepository<ForIO> {
     override fun findAll(): Kind<ForIO, List<Player>> = IO.fx {
         listOf(Player(1, "john", "doe"))
     }
 }
-

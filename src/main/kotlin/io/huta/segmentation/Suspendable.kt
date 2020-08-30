@@ -6,7 +6,7 @@ import arrow.fx.IO
 import arrow.fx.fix
 
 interface Suspendable<F> {
-    suspend fun <A: Any> Kind<F, A>.suspended(): A
+    suspend fun <A : Any> Kind<F, A>.suspended(): A
 }
 
 fun IO.Companion.suspendable(): Suspendable<ForIO> = object : Suspendable<ForIO> {
