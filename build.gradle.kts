@@ -69,6 +69,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
     testImplementation("io.rest-assured:rest-assured:$restAssuredVersion")
     testImplementation("org.hamcrest:java-hamcrest:$hamcrestVersion")
+    testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
 }
 
 tasks.withType<KotlinCompile>().configureEach {
